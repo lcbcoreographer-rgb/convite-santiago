@@ -1,23 +1,17 @@
 import { motion } from 'framer-motion';
 import posterSrc from '../../assets/video/poster.jpg';
 import { CinematicAtmosphere } from './CinematicAtmosphere';
-import { FlyingText } from './FlyingText';
 
 const WHATSAPP_NUMBER = '5541984944501';
 const RSVP_MESSAGE = 'Olá! Completei a corrida e confirmo minha presença na festa do Santiago.';
 const ADDRESS = 'Av. Prefeito Roque Vernalha, 2473';
 const NEIGHBORHOOD = 'Vila Guarani';
 
-const HEADLINE = '🏁 Você foi convidado para a primeira volta do nosso pequeno piloto!';
-
 const PARAGRAPHS = [
   'Há exatamente um ano, o Santiago deu a largada na corrida mais importante de todas: a corrida da vida. Agora, chegou a hora de comemorar sua primeira volta nessa incrível pista, cheia de descobertas, sorrisos e momentos inesquecíveis.',
   'E para tornar esse momento ainda mais especial, queremos você na torcida dessa grande corrida.',
   'Prepare seu espírito de piloto, acelere os motores e venha celebrar conosco o 1º aniversário do Santiago!',
 ];
-
-const CLOSING =
-  'Sua presença fará parte dessa grande chegada. Esperamos você na linha de chegada da primeira volta do nosso pequeno campeão.';
 
 const rsvpUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(RSVP_MESSAGE)}`;
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -67,18 +61,13 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
         className="relative z-10 mx-auto flex min-h-full max-w-md flex-col px-5 pb-12 pt-[34vh] text-center sm:px-8"
         style={{ perspective: 1200 }}
       >
-        <FlyingText
-          text={HEADLINE}
-          className="font-display block text-xl font-black leading-snug text-white text-neon sm:text-3xl"
-        />
-
-        <div className="mt-5 flex flex-col gap-3 rounded-2xl bg-black/40 px-4 py-4 text-left ring-1 ring-white/10 backdrop-blur-sm sm:px-6">
+        <div className="flex flex-col gap-3 rounded-2xl bg-black/40 px-4 py-4 text-left ring-1 ring-white/10 backdrop-blur-sm sm:px-6">
           {PARAGRAPHS.map((p, i) => (
             <motion.p
               key={i}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 1.1 + i * 0.25, ease: EASE }}
+              transition={{ duration: 0.7, delay: 0.3 + i * 0.25, ease: EASE }}
               className="text-sm leading-relaxed text-white/85 sm:text-base"
             >
               {p}
@@ -91,7 +80,7 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
             variants={fromTop}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.8, delay: 2, ease: EASE }}
+            transition={{ duration: 0.8, delay: 1.1, ease: EASE }}
           >
             <span className="font-display text-lg font-black text-white text-neon sm:text-2xl">
               🏎️ Santiago — 1 Ano
@@ -103,7 +92,7 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
               variants={fromLeft}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.8, delay: 2.15, ease: EASE }}
+              transition={{ duration: 0.8, delay: 1.25, ease: EASE }}
               className="flex flex-col items-center"
             >
               <span className="text-lg sm:text-xl">📅</span>
@@ -115,7 +104,7 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
               variants={fromRight}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.8, delay: 2.15, ease: EASE }}
+              transition={{ duration: 0.8, delay: 1.25, ease: EASE }}
               className="flex flex-col items-center"
             >
               <span className="text-lg sm:text-xl">🕢</span>
@@ -127,7 +116,7 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
             variants={fromDepth}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.9, delay: 2.3, ease: EASE }}
+            transition={{ duration: 0.9, delay: 1.4, ease: EASE }}
             className="mx-auto max-w-sm rounded-2xl bg-white/5 px-5 py-4 ring-1 ring-baby-300/25 backdrop-blur-sm"
           >
             <p className="font-display text-base font-bold text-white sm:text-lg">📍 Morena Flor Eventos</p>
@@ -139,19 +128,10 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
           </motion.div>
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.6, ease: EASE }}
-          className="mt-7 text-sm italic leading-relaxed text-white/75 sm:text-base"
-        >
-          {CLOSING}
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 2.85, ease: EASE }}
+          transition={{ duration: 0.7, delay: 1.8, ease: EASE }}
           className="mx-auto mt-7 flex w-full max-w-sm flex-col gap-3"
         >
           <a
