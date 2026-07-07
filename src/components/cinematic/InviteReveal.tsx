@@ -8,8 +8,7 @@ const ADDRESS = 'Av. Prefeito Roque Vernalha, 2473';
 const NEIGHBORHOOD = 'Vila Guarani';
 
 const PARAGRAPHS = [
-  'Há exatamente um ano, o Santiago deu a largada na corrida mais importante de todas: a corrida da vida. Agora, chegou a hora de comemorar sua primeira volta nessa incrível pista, cheia de descobertas, sorrisos e momentos inesquecíveis.',
-  'E para tornar esse momento ainda mais especial, queremos você na torcida dessa grande corrida.',
+  'Há um ano, Santiago deu a largada na corrida mais importante de todas: a corrida da vida. Agora, chegou a hora de comemorar sua primeira volta nessa incrível pista.',
   'Prepare seu espírito de piloto, acelere os motores e venha celebrar conosco o 1º aniversário do Santiago!',
 ];
 
