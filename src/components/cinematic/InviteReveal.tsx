@@ -96,7 +96,7 @@ export function InviteReveal({ onReplay }: InviteRevealProps) {
             >
               <span className="text-lg sm:text-xl">📅</span>
               <span className="font-display text-sm font-bold text-white sm:text-base">
-                27 de julho de 2026
+                22 de julho de 2026
               </span>
             </motion.div>
             <motion.div
